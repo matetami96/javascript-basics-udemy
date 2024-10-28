@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/pages/errorpage.tsx","./src/pages/myplace.tsx","./src/pages/shareplace.tsx","./src/ui/header.tsx","./src/ui/modal.tsx","./src/ui/selectedplace.tsx","./src/utility/location.ts","./src/utility/types.ts"],"version":"5.6.2"}
