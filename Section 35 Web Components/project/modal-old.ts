@@ -1,6 +1,6 @@
 type ValueType = string | number | boolean | null;
 
-class Modal extends HTMLElement {
+class ModalOld extends HTMLElement {
 	isOpen: boolean;
 	constructor() {
 		super();

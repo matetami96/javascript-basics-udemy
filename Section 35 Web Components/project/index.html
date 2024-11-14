@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Components</title>
+    <script src="./ts-built/modal.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+
+      /* html {
+        --color-primary: #a4e6fc;
+        font-family: sans-serif;
+      } */
+    </style>
+    <!-- <script src="ts-built/tooltip.js"></script>
+    <script src="ts-built/confirm-link.js"></script> -->
+    <!-- <script src="ts-built/modal.js"></script> -->
+  </head>
+
+  <body>
+    <uc-modal>
+      <h1 slot="title">Please Confirm</h1>
+      <p>With your confirmation you agree to pay the full amount!</p>
+    </uc-modal>
+    <p>Please confirm your choice.</p>
+    <button>Show Details & Confirm</button>
+    <script>
+      const confirmButton = document.querySelector("button");
+      const modal = document.querySelector("uc-modal");
+
+      modal.addEventListener("confirm", () => {
+        console.log('Confirmed ...');
+      });
+
+      modal.addEventListener("cancel", () => {
+        console.log('Canceled ...');
+      });
+
+      confirmButton.addEventListener("click", () => {
+        // this.setAttribute("opened", "");
+        if (!modal.isOpen) {
+          modal.open();
+          console.log('Opening ...');
+        }
+      });
+    </script>
+    <!-- <template id="tooltip-template"></template> -->
+    <!-- <p>
+      <uc-tooltip class="important" text="Web Components is a set of standards.">
+        <span class="highlight">Web Components</span>
+      </uc-tooltip>
+      are awesome!
+    </p>
+    <uc-tooltip></uc-tooltip>
+    <a is="uc-confirm-link" href="https://www.google.com">Google</a> -->
+    <!-- <uc-modal>
+      <h1 slot="title">The Model Title</h1>
+      <p>This is the content for the web component!</p>
+    </uc-modal>
+    <script>
+      const modal = document.querySelector('uc-modal');
+      setTimeout(() => {
+        modal.open();
+      }, 3000);
+    </script> -->
+  </body>
+
+</html>

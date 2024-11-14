@@ -1,5 +1,5 @@
 "use strict";
-class Modal extends HTMLElement {
+class ModalOld extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
